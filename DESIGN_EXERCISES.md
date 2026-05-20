@@ -1,4 +1,4 @@
-# Design Exercises
+# System Design Exercises
 
 - Define Actors/Stakeholders:
   - Customers: anyone interested in purchasing their products.
@@ -20,7 +20,7 @@
   - Performance: use asynchronous messaging with a pub/sub architecture (Kibana) and backend services using RPC-style messaging protocol.
   - Monitoring: use distributed tracing (NewRelic, Splunk) to identify the cause of the failure (Traces should include a correlation ID).
 
-## Amazon Dashboard
+## System Design Exercise - Amazon Dashboard
 
 - Define Objective/Requeriments
   * Create a Search textbox for products
@@ -36,7 +36,54 @@
 - Actions/Actors
   * Users (JWT roles)
 
-## Facebook Fake Accounts
+## System Design Exercise - Amazon Dashboard
+
+- Define Objective/Requeriments
+  * Create a Search textbox for products
+- Define Limitations
+  * Ranking system
+  * Number of products (database)
+  * Number of categories (database)
+  * Number of write Transactions per month
+  * Number or read Transactions per month
+- Out of Scope
+  * Suggestions
+  * Infinite scrolling
+- Actions/Actors
+  * Users (JWT roles)
+
+## System Design Exercise - WhatsApp Messaging
+
+### Round 1 - Core Design
+
+Design WhatsApp-Scale Messaging — Core Design
+
+Design the backend for a WhatsApp-like messaging system.
+
+Data model: how do you store messages, conversations, users?
+Delivery: how does message delivery work end-to-end (sender → server → recipient)?
+Offline: how do you handle online vs offline recipients?
+
+### Round 2 - Scale It
+
+Design WhatsApp-Scale Messaging — Scale It
+
+You now have 1B users, 100B messages/day (~1.15M msg/sec peak).
+
+Bottlenecks: where does your Round 1 design break first?
+Fan-out: how do you handle group chats with 1,000 members?
+
+### Round 3 - Hard Problems
+
+Design WhatsApp-Scale Messaging — Hard Problems
+
+Pick one to go deep on:
+
+- Exactly-once delivery guarantees
+- Message ordering across devices (multi-device sync)
+- End-to-end encryption key distribution at scale
+
+## System Design Exercise - Facebook Fake Accounts
 
 - Design a system that allow people to report fake accounts on Facebook
 
